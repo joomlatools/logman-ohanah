@@ -7,12 +7,12 @@
  */
 
 /**
- * Attendee Ohanah Logger
+ * Ticket Ohanah Logger
  *
  * @author  Arunas Mazeika <https://github.com/amazeika>
  * @package Joomlatools\Plugin\LOGman
  */
-class PlgLogmanOhanahLoggerAttendee extends ComLogmanActivityLogger
+class PlgLogmanOhanahLoggerTicket extends ComLogmanActivityLogger
 {
     public function getActivityData(KModelEntityInterface $object, KObjectIdentifierInterface $subject)
     {
@@ -21,17 +21,12 @@ class PlgLogmanOhanahLoggerAttendee extends ComLogmanActivityLogger
         $fields = json_decode($object->fields);
 
         $data['title'] = sprintf('%s %s', $fields->first_name, $fields->last_name);
+        $data['name']  = 'ticket';
 
         $event = $object->event;
 
         if (count($event) == 1 and !$event->isNew()) {
             $data['metadata'] = array('event' => array('id' => $event->id, 'title' => $event->title));
-        }
-
-        if ($subject->getName() == 'ticket')
-        {
-            $data['action'] = 'order';
-            $data['status'] = 'ordered';
         }
 
         return $data;
