@@ -21,8 +21,8 @@ class PlgLogmanOhanah extends ComLogmanPluginKoowa
                 'com://admin/ohanah.controller.event'    => 'com://admin/logman.activity.logger',
                 'com://site/ohanah.controller.event'     => 'com://admin/logman.activity.logger',
                 'com://admin/ohanah.controller.category' => 'plg:logman.ohanah.logger.category',
-                'com://admin/ohanah.controller.attendee' => 'plg:logman.ohanah.logger.attendee',
-                'com://site/ohanah.controller.ticket'    => 'plg:logman.ohanah.logger.attendee',
+                'com://admin/ohanah.controller.attendee' => 'plg:logman.ohanah.logger.ticket',
+                'com://site/ohanah.controller.ticket'    => 'plg:logman.ohanah.logger.ticket',
             )
         ));
 
