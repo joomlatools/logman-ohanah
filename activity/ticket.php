@@ -28,7 +28,7 @@ class PlgLogmanOhanahActivityTicket extends ComLogmanModelEntityActivity
     protected function _objectConfig(KObjectConfig $config)
     {
         $config->append(array(
-            'url' => 'option=com_ohanah&view=attendee&id=' . $this->row
+            'url' => array('admin' => 'option=com_ohanah&view=attendee&id=' . $this->row)
         ))->append(array('type' => array('find' => 'object', 'url' => $config->url)));
 
         parent::_objectConfig($config);
@@ -68,7 +68,7 @@ class PlgLogmanOhanahActivityTicket extends ComLogmanModelEntityActivity
             ),
             'objectName' => $metadata->event->title,
             'find'       => 'target',
-            'url'        => sprintf('option=com_ohanah&view=event&id=%s', $event->id)
+            'url'        => array('admin' => sprintf('option=com_ohanah&view=event&id=%s', $event->id))
         ));
     }
 

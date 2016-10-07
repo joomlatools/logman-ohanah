@@ -29,7 +29,7 @@ class PlgLogmanOhanahActivityEvent extends ComLogmanModelEntityActivity
     {
         $config->append(array(
             'subtype' => array('objectName' => 'Ohanah', 'object' => true),
-            'url'     => 'option=com_ohanah&view=event&id=' . $this->row
+            'url'     => array('admin' => 'option=com_ohanah&view=event&id=' . $this->row)
         ));
 
         parent::_objectConfig($config);
