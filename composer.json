@@ -1,0 +1,24 @@
+{
+  "name": "joomlatools/logman-ohanah",
+  "type": "joomlatools-composer",
+  "license": "GPLv3",
+  "description": "Handles logging of Ohanah Tree events",
+  "keywords": [
+    "joomla",
+    "extension",
+    "plugins",
+    "logman",
+    "ohanah"
+  ],
+  "homepage": "https://github.com/joomlatools/logman-ohanah",
+  "authors": [
+    {
+      "name": "Joomlatools",
+      "email": "info@joomlatools.net",
+      "homepage": "http://www.joomlatools.com"
+    }
+  ],
+  "require": {
+    "joomlatools/composer": "*"
+  }
+}
